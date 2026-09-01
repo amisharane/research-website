@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0a0e17; /* Deep space dark background */
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* --- Top Galaxy Banner --- */
+.hero-banner {
+    width: 100%;
+    height: 250px;
+    /* Blends a dark tint over your background.jpg so the white quote is easy to read */
+    background: linear-gradient(rgba(10, 14, 23, 0.5), rgba(10, 14, 23, 0.8)), url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #00f0ff; /* Bright cyan accent line at the bottom of the banner */
+}
+
+.hero-banner h1 {
+    font-size: 50px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff;
+    max-width: 1000px;
+    letter-spacing: 1px;
+}
+
+/* --- Main Content Area --- */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px 100px 20px;
+}
+
+/* --- Navigation Menu --- */
+.section-nav {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #1f2937; /* Subtle divider line */
+    padding-bottom: 20px;
+}
+
+.section-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.section-nav a:hover {
+    color: #ffcc66; /* Nebula cyan hover effect */
+}
+
+/* --- About Section (With Big Image) --- */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.big-profile-img {
+    width: 480px; /* Much bigger picture! */
+    height: 550px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: -15px 15px 0px #00f0ff; /* Cool cyan offset block shadow */
+}
+
+.about-text {
+    flex: 1;
+}
+
+.role-title {
+    color: #00f0ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about-text h2 {
+    font-size: 46px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #a0aec0;
+    line-height: 1.8;
+}
+
+/* --- Research / Content Sections --- */
+.content-section {
+    margin-bottom: 60px;
+    background: #111827; /* Slightly lighter box for research */
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.content-section h3 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-left: 4px solid #00f0ff; /* Cyan line next to the heading */
+    padding-left: 15px;
+}
+
+.content-section p {
+    font-size: 18px;
+    color: #a0aec0;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+/* --- Side-by-Side Education Cards --- */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between each university block */
+}
+
+.education-card {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between the image and the text */
+    background: #111827; /* Dark space theme box */
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 6px solid transparent; 
+    transition: all 0.3s ease; 
+}
+
+/* ADD THIS NEW BLOCK FOR THE HOVER EFFECT */
+.education-card:hover {
+    border-left: 6px solid #00f0ff;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.05);
+    transform: translateX(5px); /* Slides the card slightly to the right */
+}
+
+.edu-img {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.edu-details {
+    flex: 1;
+}
+
+.edu-level {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    text-decoration-color: #00f0ff; /* Cyan underline */
+    text-underline-offset: 6px;
+}
+
+.edu-details p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #a0aec0;
+    line-height: 1.5;
+}
+
+.edu-details strong {
+    color: #e0e0e0; /* Makes the labels like "Degree:" pop */
+}
+
+/* --- Research Feature Cards --- */
+.research-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #111827;
+    padding: 35px;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Adds a cyan glow and border when hovering over a project */
+.project-card:hover {
+    border-left: 6px solid #00f0ff;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.project-text {
+    flex: 1; /* Allows the text to take up most of the card */
+}
+
+.project-text h3 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.project-text p {
+    font-size: 16px;
+    color: #a0aec0;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.project-img {
+    width: 380px; /* Perfect size for a data plot or telescope image */
+    height: 350px;
+    object-fit: fit;
+    border-radius: 6px;
+    border: 5px solid #3399ff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+/* --- Teaching & Mentorship Cards --- */
+.teaching-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.category-title {
+    color: #ffffff;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1f2937;
+    padding-bottom: 10px;
+}
+
+.teaching-card {
+    background: #111827;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.teaching-card:hover {
+    border-left: 4px solid #00f0ff;
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-header h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Styles the date like a modern pill badge */
+.date-badge {
+    background: rgba(0, 240, 255, 0.1);
+    color: #00f0ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.institution {
+    color: #00f0ff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.duties-list {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.duties-list li {
+    color: #a0aec0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Creates a custom cyan bullet point */
+.duties-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #00f0ff;
+    font-size: 18px;
+}
+/* --- CV / Resume Section --- */
+.cv-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1f2937;
+    padding-bottom: 20px;
+}
+
+.cv-header h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Fancy Glowing Download Button */
+.download-btn {
+    background: #00f0ff;
+    color: #0a0e17; /* Dark text for high contrast */
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 30px; /* Gives it that modern pill shape */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);
+}
+
+.download-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 6px 25px rgba(0, 240, 255, 0.6);
+    transform: translateY(-3px); /* Makes the button "lift" when hovered */
+}
+
+/* PDF Viewer Container with Glass/Glow Effect */
+.pdf-container {
+    background: #111827;
+    padding: 15px; /* Creates a dark frame around the white PDF */
+    border-radius: 12px;
+    border: 2px solid #374151;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+}
+
+.pdf-container:hover {
+    border-color: #00f0ff; /* The frame turns cyan on hover */
+    box-shadow: 0 10px 40px rgba(0, 240, 255, 0.15); /* Adds a subtle cyan glow behind the document */
+}
+
+.pdf-container iframe {
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff; /* Ensures the background behind the document stays white */
+}
+
+/* --- Publications Section (Increased Spacing) --- */
+.publications-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Increased from 25px to give much more space between items */
+    margin-top: 20px;
+}
+
+/* --- Publication Link Buttons (Simplified) --- */
+.pub-link {
+    background: transparent;
+    color: red;
+    border: none; /* Removed the colored box entirely */
+    padding: 0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.pub-link:hover {
+    color: #ffffff; /* Simply changes to white when hovered */
+    text-decoration: underline; /* Adds a clean underline */
+    text-underline-offset: 6px; /* Spaces the underline nicely away from the text */
+    transform: none; /* Removes the jumping animation */
+    box-shadow: none; /* Removes the glowing effect */
+}
+.conf-date {
+    color: #93c5fd; /* Changed to your signature cyan blue */
+    background: transparent; /* Removed the gray box for a much cleaner look */
+    border: none; 
+    box-shadow: none;
+    font-size: 16px; /* Slightly larger to match the new text links */
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0;
+}
+/* --- Conference Presentation & Location Details --- */
+.conf-details {
+    color: #93c5fd; /* Soft pastel blue for the location text */
+    font-size: 15px;
+    margin: 0;
+    margin-top: 8px;
+}
+
+.conf-details strong {
+    color: #93c5fd; /* Bright cyan for the words 'Poster' or 'Podium' */
+    font-weight: 600;
+}
+/* --- Two-Panel Layout for Publications --- */
+.panels-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* This creates the Left and Right panels */
+    gap: 50px; /* Adds a nice wide space between the two columns */
+    margin-top: 20px;
+    align-items: start; /* Prevents the columns from unnaturally stretching */
+}
+
+.panel-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between each individual card inside the panel */
+}
+
+
+/* --- Centered CV Download Section --- */
+.cv-download-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Makes sure the card sits nicely in the middle of the screen */
+    margin-top: 40px;
+}
+
+.download-card {
+    background: #111827;
+    padding: 60px 40px;
+    border-radius: 12px;
+    border: 2px solid #374151;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    border-top: 4px solid #00f0ff; /* Adds a nice cyan accent to the top of the card */
+}
+
+.download-card h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.download-card p {
+    color: #a0aec0;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 45px; /* Creates space between the text and the button */
+}
+
+/* We keep your exact same Glowing Download Button style! */
+.download-btn {
+    background: #00f0ff;
+    color: #0a0e17; 
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 30px; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);
+    display: inline-block; /* Ensures the button sizes itself correctly */
+}
+
+.download-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 6px 25px rgba(0, 240, 255, 0.6);
+    transform: translateY(-3px); 
+}
+
+/* --- CV Page Specific Banner --- */
+.cv-banner {
+    /* Uses a sleek, dark-themed image of a professional workspace and documents */
+    background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+.contact-link {
+    color: #9333ea; 
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+/* --- Contact Page Specific Banner --- */
+.contact-banner {
+    /* Uses a dark, moody image of a glowing neon 'Hello' sign */
+    background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.9)), url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+/* --- Personal Page Banner --- */
+.personal-banner {
+    /* A beautiful, calm sunset over water */
+    background-image: linear-gradient(rgba(17, 24, 39, 0.6), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Hobbies Grid Layout --- */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically creates equal columns that adapt to screen size */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.hobby-card {
+    background: #111827;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures the image doesn't spill out of the rounded corners */
+    border: 1px solid #374151;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.15);
+    border-color: #00f0ff;
+}
+
+.hobby-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #00f0ff; /* Adds a clean cyan separator line */
+}
+
+.hobby-info {
+    padding: 20px;
+}
+
+.hobby-info h3 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.hobby-info p {
+    color: #a0aec0;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
